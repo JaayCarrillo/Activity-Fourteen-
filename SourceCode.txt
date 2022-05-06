@@ -1,0 +1,114 @@
+Joseph Carrillo 
+CST-150 C# I 
+Activity Fourteen
+05/06/22
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Activity_Fourteen
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            // string values// could have done a better job with some arrays and loops
+
+            string j= "January";
+            string f = "February";
+            string m = "March";
+            string a = "April";
+            string my = "May";
+            string june = "June";
+            string july = "July";
+            string august = "August";
+            string spt = "September";
+            string oct = "October";
+            string nov = "November";
+            string dec = "December";
+            // could improve down the road on displaying each zodiac with pertaining month from listbox
+
+            // display values
+            listBox1.Items.Add(j);
+            listBox1.Items.Add(f);
+            listBox1.Items.Add(m);
+            listBox1.Items.Add(a);
+            listBox1.Items.Add(my);
+            listBox1.Items.Add(june);
+            listBox1.Items.Add(july);
+            listBox1.Items.Add(august);
+            listBox1.Items.Add(spt);
+            listBox1.Items.Add(oct);
+            listBox1.Items.Add(nov);
+            listBox1.Items.Add(dec);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            listBox1.Items.Clear();
+        }
+
+       
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // check box section 
+            string name = "Joseph";
+            string lastName = "Carrillo";
+            if (checkBox1.Checked)
+            {
+                textBox1.Text = name;
+            }
+            if (checkBox2.Checked)
+            {
+                textBox2.Text = lastName;
+            }
+            else
+            {
+                MessageBox.Show("Check Boxes");
+            }
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void libraButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+            // could improve down the road on displaying each zodiac with pertaining month from listbox
+            if (libraButton.Checked)
+            {
+                MessageBox.Show("Keeper of Balance");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+
+        }
+    }
+}
